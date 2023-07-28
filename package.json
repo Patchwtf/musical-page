@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Patchwtf/musical-page/issues"
   },
-  "homepage": "https://github.com/Patchwtf/musical-page#readme"
+  "homepage": "https://github.com/Patchwtf/musical-page#readme",
+  "devDependencies": {
+    "sass": "^1.64.1"
+  }
 }
