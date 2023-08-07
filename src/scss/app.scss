@@ -1,3 +1,8 @@
-$rojo : green;
+// Existen 2 sintaxis para importar archivos
+// forma vieja
+@import 'base/variables';
+@import 'content/contenido';
+// forma nueva
+
 
 body{background-color: $rojo;}
