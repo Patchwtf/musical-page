@@ -1,8 +1,10 @@
 // Existen 2 sintaxis para importar archivos
 // forma vieja
-@import 'base/variables';
-@import 'content/contenido';
+// @import 'base';
+// @import 'content';
 // forma nueva
+// ¡ no es global
+@use 'base';
+@use 'content';
 
 
-body{background-color: $rojo;}

@@ -1,6 +1,18 @@
-h1{
-    color: $rojo;
+@use 'base/variables' as v;
+
+// ¡ Cuando se utiliza el nuevo metodo para importar, es necesarios mandar a llamar a las avriables como atributos de un objeto
+// ¡convirtiendo las hojas de estilo en objetos.
+// h1{
+//     color: $rojo;
+// }
+// body {
+//     background-color: $rojo;
+// }
+
+h1 {
+    color: v.$rojo;
 }
+
 body {
-    background-color: $rojo;
+    background-color: v.$rojo;
 }
