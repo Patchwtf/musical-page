@@ -9,7 +9,7 @@ function css(done) {
 }
 
 function dev(done) {
-  watch("src/scss/app.scss", css);
+  watch("src/scss/**/*.scss", css);
   done();
 }
 
