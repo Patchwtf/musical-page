@@ -1,0 +1,32 @@
+@use 'variables' as v;
+
+@mixin phone{
+    @media (min-width: v.$telefono){
+        background-color: blue;;
+        @content; //*sirve para poder modificar los elementos de un mixin una vez im0plementado y este sopote un bloque de codigo
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        background-color: blue;
+        ;
+        @content; //*sirve para poder modificar los elementos de un mixin una vez im0plementado y este sopote un bloque de codigo
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        background-color: blue;
+        ;
+        @content; //*sirve para poder modificar los elementos de un mixin una vez im0plementado y este sopote un bloque de codigo
+    }
+}
+
+@mixin desktopXL {
+    @media (min-width: v.$desktopXL) {
+        background-color: blue;
+        ;
+        @content; //*sirve para poder modificar los elementos de un mixin una vez im0plementado y este sopote un bloque de codigo
+    }
+}
