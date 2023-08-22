@@ -28,3 +28,10 @@
         @content; //*sirve para poder modificar los elementos de un mixin una vez im0plementado y este sopote un bloque de codigo
     }
 }
+
+@mixin grid($columnas, $espacio)
+{
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espacio;
+}
