@@ -41,3 +41,21 @@ picture{
     max-width: 80rem;
 }
 }
+
+.btn-cerrar{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: v.$blanco;
+    color: v.$negro;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    &:hover{
+        cursor: pointer;
+    }
+}
