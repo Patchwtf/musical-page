@@ -52,7 +52,7 @@ function javaScript(done) {
 
 function dev(done) {
   watch("src/scss/**/*.scss", css);
-  watch("src/scss/**/*.js", javaScript);
+  watch("src/js/**/*.js", javaScript);
   done();
 }
 
