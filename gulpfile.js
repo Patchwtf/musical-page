@@ -6,6 +6,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const sourcemaps = require("gulp-sourcemaps");
+const terser = require("gulp-terser-js");
 
 //- IMAGENES
 const cache = require("gulp-cache");
@@ -53,7 +54,7 @@ function imagenes(done) {
 }
 
 function javaScript(done) {
-  src("src/js/**/*.js").pipe(dest("build/js"));
+  src("src/js/**/*.js").pipe(sourcemaps.init()).pipe(terser()).pipe(sourcemaps.write(".")).pipe(dest("build/js"));
   done();
 }
 
