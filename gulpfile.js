@@ -5,6 +5,7 @@ const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
+const sourcemaps = require("gulp-sourcemaps");
 
 //- IMAGENES
 const cache = require("gulp-cache");
@@ -14,9 +15,11 @@ const avif = require("gulp-avif");
 
 function css(done) {
   src("src/scss/app.scss") //*Identificar archivo de SASS
+    .pipe(sourcemaps.init()) //*Inicializa SourceMaps
     .pipe(plumber()) //* Sirve para no detener el WorkFlow cuando un archivo compile mal
     .pipe(sass()) //*Compilarlo
     .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sourcemaps.write(".")) //*Estalece la ubicacion donde se guardara el mapa
     .pipe(dest("build/css")); //*Almacenarlo en el disco duro
   done(); //¡CAllBACK que avisa a gulp cuando llegamos al final
 }
