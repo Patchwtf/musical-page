@@ -2,6 +2,9 @@ const { src, dest, watch, parallel } = require("gulp");
 //- CSS
 const sass = require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
 
 //- IMAGENES
 const cache = require("gulp-cache");
@@ -13,6 +16,7 @@ function css(done) {
   src("src/scss/app.scss") //*Identificar archivo de SASS
     .pipe(plumber()) //* Sirve para no detener el WorkFlow cuando un archivo compile mal
     .pipe(sass()) //*Compilarlo
+    .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest("build/css")); //*Almacenarlo en el disco duro
   done(); //¡CAllBACK que avisa a gulp cuando llegamos al final
 }
